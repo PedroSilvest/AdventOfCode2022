@@ -20,5 +20,5 @@ def task_2(cal):
 
 
 calories = task_1()
-print(calories[0])
+print(max(calories))
 print(task_2(calories))

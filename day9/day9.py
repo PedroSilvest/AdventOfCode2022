@@ -44,11 +44,11 @@ def move_tail(knot, above_knot):
 
 def vis_positions(part, movs):
     if part == 1:
-        nr_of_knots = 2
+        n_knots = 2
     elif part == 2:
-        nr_of_knots = 10
+        n_knots = 10
 
-    knots = {knot: {"x": 0, "y": 0} for knot in range(nr_of_knots)}
+    knots = {knot: {"x": 0, "y": 0} for knot in range(n_knots)}
     visit_pos = {(0, 0)}
 
     for direction, length in movs:
@@ -58,7 +58,7 @@ def vis_positions(part, movs):
                     move_head(knots[0], direction)
                 else:
                     knots[key] = move_tail(knot, knots[key - 1])
-            visit_pos.add((knots[nr_of_knots - 1]["x"], knots[nr_of_knots - 1]["y"]))
+            visit_pos.add((knots[n_knots - 1]["x"], knots[n_knots - 1]["y"]))
     return len(visit_pos)
 
 

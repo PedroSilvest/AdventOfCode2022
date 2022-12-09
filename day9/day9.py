@@ -49,7 +49,8 @@ def vis_positions(part, movs):
         n_knots = 10
 
     knots = {knot: {"x": 0, "y": 0} for knot in range(n_knots)}
-    visit_pos = {(0, 0)}
+    visit_pos = set()
+    visit_pos.add((0,0))
 
     for direction, length in movs:
         for i in range(int(length)):

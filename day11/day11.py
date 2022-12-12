@@ -14,6 +14,7 @@ ops = {
     '^' : operator.xor
 }
 
+
 monkeys = []
 
 class Monkey:
@@ -56,13 +57,6 @@ class Monkey:
                 location[0].addItem(new)
         self.items = []
     
-import math
-
-print ("Natural logarithm of 14 is : ", end="")
-print (math.log(4))
-
-
-
 
 for monk in f:
     items = monk[1].replace("  Starting items: ","").split(", ")
@@ -76,7 +70,6 @@ for monk in f:
 for _ in range(20):
     for monkey in monkeys:
         monkey.WorryLevel(part = 1)
-
 
 inspections = sorted([x.inspection for x in monkeys], reverse=True)
 print(inspections)
